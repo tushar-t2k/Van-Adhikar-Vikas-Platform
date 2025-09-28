@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 45 15% 98%;
+    --foreground: 150 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 35% 15%;
+
+    --primary: 145 55% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 145 25% 92%;
+    --secondary-foreground: 150 35% 15%;
+
+    --muted: 140 15% 95%;
+    --muted-foreground: 150 15% 45%;
+
+    --accent: 35 85% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 145 55% 35%;
+
+    --radius: 0.75rem;
+    
+    /* Forest-inspired design tokens */
+    --forest-primary: 145 55% 35%;
+    --forest-secondary: 120 40% 25%;
+    --earth-primary: 35 85% 60%;
+    --earth-secondary: 25 65% 45%;
+    --nature-light: 145 25% 92%;
+    --nature-muted: 140 15% 95%;
+    
+    /* Gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(var(--forest-primary)), hsl(var(--forest-secondary)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth-primary)), hsl(var(--earth-secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--forest-primary)) 0%, hsl(var(--earth-primary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--nature-light)), hsl(var(--nature-muted)));
+    
+    /* Shadows */
+    --shadow-forest: 0 10px 30px -10px hsl(var(--forest-primary) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--forest-primary) / 0.15);
+    --shadow-hero: 0 20px 50px -10px hsl(var(--forest-primary) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 150 25% 8%;
+    --foreground: 140 15% 92%;
+
+    --card: 150 20% 12%;
+    --card-foreground: 140 15% 92%;
+
+    --popover: 150 20% 12%;
+    --popover-foreground: 140 15% 92%;
+
+    --primary: 145 50% 65%;
+    --primary-foreground: 150 35% 15%;
+
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 140 15% 92%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 140 10% 65%;
+
+    --accent: 35 75% 65%;
+    --accent-foreground: 150 35% 15%;
+
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 145 50% 65%;
+    
+    /* Dark mode forest tokens */
+    --forest-primary: 145 50% 65%;
+    --forest-secondary: 120 45% 45%;
+    --earth-primary: 35 75% 65%;
+    --earth-secondary: 25 60% 55%;
+    --nature-light: 150 15% 18%;
+    --nature-muted: 150 10% 15%;
+    
+    /* Dark gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(var(--forest-primary)), hsl(var(--forest-secondary)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth-primary)), hsl(var(--earth-secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--forest-primary)) 0%, hsl(var(--earth-primary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--nature-light)), hsl(var(--nature-muted)));
+    
+    /* Dark shadows */
+    --shadow-forest: 0 10px 30px -10px hsl(var(--forest-primary) / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(var(--forest-primary) / 0.25);
+    --shadow-hero: 0 20px 50px -10px hsl(var(--forest-primary) / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
